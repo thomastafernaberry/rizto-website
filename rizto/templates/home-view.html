@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block home-view %}
+
+<div class="hero">
+    <hgroup>
+        <h1>Rizto</h1>
+        <h4>Tienda de productos tecnológicos</h4>
+    </hgroup>
+    <form action="/productos" method="get">
+        <button class="primary">
+            <h5>Mirá nuestros productos</h5>
+        </button>
+    </form>
+</div>
+
+{% include "featured-products.html" %}
+
+{% include "go-to-products.html" %}
+
+{% include "faq.html" %}
+
+{% endblock home-view %}

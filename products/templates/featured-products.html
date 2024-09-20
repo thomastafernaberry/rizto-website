@@ -1,0 +1,9 @@
+
+<section>
+    <div class="products-container featured-products">
+        <h3>Productos destacados</h3>
+        {% for product in featured_products %}
+            {% include "product.html" %}
+        {% endfor product %}
+    </div>
+</section>

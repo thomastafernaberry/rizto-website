@@ -1,0 +1,21 @@
+
+<form class="filters-container" method="get">
+    <h5>Filtrá tu búsqueda</h5>
+        <div class="filters">
+            <select name="categories" id="categories">
+                <option value="">Categorías</option>
+                {% for category in all_categories %}
+                <option value="{{category.name}}">{{category.name}}</option>
+                {% endfor category %}
+            </select>
+            <select name="brands" id="brands">
+                <option value="">Marcas</option>
+                {% for brand in all_brands %}
+                <option value="{{brand.name}}">{{brand.name}}</option>
+                {% endfor brand %}
+            </select>
+            <button type="submit">Aplicar filtros</button>
+            <a href="/productos">Limpiar filtros</a>
+        </div>
+</form>
+ 

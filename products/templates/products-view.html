@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block products-view %}
+
+{% include "header.html" %}
+
+<section class="products-section">
+    <div class="products-container">
+        <h3>{{header}}</h3>
+        {% if products_to_show %}
+            {% for product in products_to_show %}
+                {% include "product.html" %}
+            {% endfor product %}
+        {% else %}
+            <h4>No hay productos que coincidan con tu búsqueda</h4>
+        {% endif %}
+    </div>
+</section>
+
+{% endblock products-view %}

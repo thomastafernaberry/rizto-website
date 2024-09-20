@@ -1,0 +1,21 @@
+{% load static %}
+
+<div class="product-detail" href="/productos/{{product.slug}}">
+    <img src="{% get_media_prefix %}{{product.image_1}}" alt="product image">
+    <div class="product-information">
+        <h3 class="name">{{product.name}}</h3>
+        <h5 class="price">Precio final: $ {{product.price}}</h5>
+        <div class="features">
+            <ul>
+                <li><p>{{product.characteristic_1}}</p></li>
+                <li><p>{{product.characteristic_2}}</p></li>
+                <li><p>{{product.characteristic_3}}</p></li>
+            </ul>
+        </div>
+        <form class="chat-button" action="#" method="get">
+            <button class="whatsapp"><h5>Envianos un mensaje</h5></button>
+        </form>
+    </div>
+
+</div>
+
